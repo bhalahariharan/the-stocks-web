@@ -1,5 +1,20 @@
 import styled from '@emotion/styled';
 
+export const CenteredContainer = styled.div`
+  align-items: center;
+  background-color: #232238;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  color: #dfdfdf;
+`;
+
+export const StartUpLoaderContainer = styled(CenteredContainer)`
+  .label {
+    margin-left: 16px;
+  }
+`;
+
 export const AuthWallContainer = styled.div`
   align-items: center;
   background-color: #232238;

@@ -1,5 +1,6 @@
 import { Route, Switch } from 'react-router-dom';
 
+import PrivateRoutes from './PrivateRoutes';
 import AuthWall from './components/AuthWall';
 
 function Routes() {
@@ -8,9 +9,7 @@ function Routes() {
       <Route exact path="/authwall">
         <AuthWall />
       </Route>
-      <Route exact path="/">
-        <p>Home</p>
-      </Route>
+      <PrivateRoutes />
       <Route path="*">
         <p>404 | Page not found</p>
       </Route>
