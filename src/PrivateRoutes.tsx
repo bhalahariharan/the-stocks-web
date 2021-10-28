@@ -59,8 +59,17 @@ function PrivateRoutes() {
   }
 
   return (
-    <Route exact path="">
-      <p>Home</p>
+    <Route exact path={['/', '/stocks', '/etfs']}>
+      <AppLayout>
+        <>
+          <Route exact path="/">
+            <Redirect to="/stocks" />
+          </Route>
+          <Route path="">
+            <Home />
+          </Route>
+        </>
+      </AppLayout>
     </Route>
   );
 }

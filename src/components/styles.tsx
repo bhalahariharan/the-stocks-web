@@ -1,3 +1,5 @@
+import Button from '@mui/material/Button';
+import AppBar from '@mui/material/AppBar';
 import styled from '@emotion/styled';
 
 export const CenteredContainer = styled.div`
@@ -48,3 +50,14 @@ export const StyledPinInput = styled.input`
   text-align: center;
 `;
 
+export const StyledAppBar = styled(AppBar)`
+  color: #333333;
+  background-color: #ffffff;
+`;
+
+export const LogoutButton = styled(Button)`
+  color: #ee6659;
+  &:hover {
+    background-color: #ffd0c8;
+  }
+`;
