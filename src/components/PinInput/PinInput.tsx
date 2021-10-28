@@ -6,10 +6,11 @@ import { PIN_LENGTH } from '../../constants';
 
 interface IProps {
   value: string;
+  disabled: boolean;
   onChange(pin: string): void;
 }
 
-function PinInput({ value, onChange }: IProps) {
+function PinInput({ value, disabled, onChange }: IProps) {
   const [activeInputPosition, setActiveInputPosition] = useState<number | null>(0);
 
   function handleChange(newValue: string, position: number) {
@@ -52,6 +53,7 @@ function PinInput({ value, onChange }: IProps) {
             key={i}
             position={i}
             value={value[i] || ''}
+            disabled={disabled}
             shouldFocus={getShouldFocus(i)}
             onChange={handleChange}
             onKeyDown={handleKeyDown}

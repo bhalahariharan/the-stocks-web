@@ -8,12 +8,13 @@ interface IProps {
   value: string;
   shouldFocus: boolean;
   position: number;
+  disabled: boolean;
   onChange(value: string, position: number): void;
   onKeyDown(event: React.KeyboardEvent<HTMLInputElement>, position: number): void;
   onFocus(position: number): void;
 }
 
-function Input({ value, shouldFocus, position, onChange, onKeyDown, onFocus }: IProps) {
+function Input({ value, shouldFocus, position, disabled, onChange, onKeyDown, onFocus }: IProps) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -46,6 +47,7 @@ function Input({ value, shouldFocus, position, onChange, onKeyDown, onFocus }: I
       ref={inputRef}
       type="password"
       value={value}
+      disabled={disabled}
       maxLength={1}
       autoComplete="off"
       onChange={handleChange}
