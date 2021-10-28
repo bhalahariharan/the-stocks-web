@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Input from './Input';
 
-import { PIN_LENGTH } from '../../constants';
+import { PIN_LENGTH } from '../../utils/constants';
 
 interface IProps {
   value: string;

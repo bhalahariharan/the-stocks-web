@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 
 import { StyledPinInput } from '../styles';
 
-import { REGEX } from '../../constants';
+import { REGEX } from '../../utils/constants';
 
 interface IProps {
   value: string;
