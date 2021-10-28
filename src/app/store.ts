@@ -1,7 +1,10 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+import snackbarReducer from './slices/snackbar-slice';
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    snackbar: snackbarReducer,
+  },
 });
 
 export type AppDispatch = typeof store.dispatch;
