@@ -22,7 +22,7 @@ const initialState: SnackbarState = {
 };
 
 export const slice = createSlice({
-  name: 'auth',
+  name: 'snackbar',
   initialState,
   reducers: {
     showSnackbar: (state, action: PayloadAction<ShowSnackbarPayload>) => {

@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 import { AppThunk, RootState } from '../../app/store';
-import { User } from '../../models/user.model';
+import { User } from '../../models/user';
 import { getApiErrorResponse } from '../../utils/helpers';
 import localStorage from '../../utils/local-storage';
 import authService from '../services/auth-service';

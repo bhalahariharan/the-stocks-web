@@ -7,3 +7,10 @@ export function getApiErrorResponse(err: any) {
 
   return { error, data, errorMessage };
 }
+
+export function appendId(data: any[], key = '_id') {
+  return data.map((d) => {
+    d.id = d[key];
+    return d;
+  });
+}

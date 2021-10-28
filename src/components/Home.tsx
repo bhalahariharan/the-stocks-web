@@ -7,6 +7,8 @@ import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
 import styled from '@emotion/styled';
 
+import StocksEtfsTable from './StocksEtfsTable';
+
 const StyledTitle = styled.div`
   margin: 16px 0;
   color: #333333;
@@ -40,16 +42,26 @@ function Home() {
   function getActiveTabComponent(value: number) {
     switch (value) {
       case 0:
-        return <StyledTitle>All Stocks</StyledTitle>;
+        return (
+          <>
+            <StyledTitle>All Stocks</StyledTitle>
+            <StocksEtfsTable equityType="STOCK" />
+          </>
+        );
       case 1:
-        return <StyledTitle>All ETFs</StyledTitle>;
+        return (
+          <>
+            <StyledTitle>All ETFs</StyledTitle>
+            <StocksEtfsTable equityType="ETF" />
+          </>
+        );
       default:
         return <p>Unknown Tab</p>;
     }
   }
 
   return (
-    <Container maxWidth="lg" disableGutters>
+    <Container maxWidth="lg">
       <Tabs value={activeTab} onChange={handleTabChange}>
         {TABS.map((tab, i) => (
           <Tab key={i} component={Link} to={tab.path} label={tab.label} />

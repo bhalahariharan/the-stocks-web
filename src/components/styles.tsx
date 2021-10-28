@@ -61,3 +61,12 @@ export const LogoutButton = styled(Button)`
     background-color: #ffd0c8;
   }
 `;
+
+export const StyledStocksEtfsTableContainer = styled.div<{ clickableRow?: boolean }>`
+  .table {
+    height: calc(100vh - 250px) !important;
+  }
+  .row {
+    cursor: ${(props) => (props.clickableRow ? 'pointer' : 'normal')};
+  }
+`;
