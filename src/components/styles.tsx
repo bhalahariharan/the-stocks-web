@@ -70,3 +70,7 @@ export const StyledStocksEtfsTableContainer = styled.div<{ clickableRow?: boolea
     cursor: ${(props) => (props.clickableRow ? 'pointer' : 'normal')};
   }
 `;
+
+export const StyledLinearProgress = styled.div`
+  min-height: 4px;
+`;

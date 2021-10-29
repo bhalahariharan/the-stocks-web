@@ -3,7 +3,7 @@ import { Redirect, useHistory } from 'react-router';
 import Paper from '@mui/material/Paper';
 import LinearProgress from '@mui/material/LinearProgress';
 
-import { AuthWallContainer as Container } from './styles';
+import { AuthWallContainer as Container, StyledLinearProgress } from './styles';
 import PinInput from './PinInput/PinInput';
 
 import { useAppDispatch, useAppSelector } from '../app/hooks';
@@ -42,7 +42,9 @@ function AuthWall() {
     <Container>
       <h1 className="title">The Stocks</h1>
       <Paper elevation={0} className="paper">
-        {isLoading && <LinearProgress variant="indeterminate" />}
+        <StyledLinearProgress>
+          {isLoading && <LinearProgress variant="indeterminate" />}
+        </StyledLinearProgress>
         <h2>👋🏻 Hello, Guest</h2>
         <PinInput value={pin} disabled={isLoading} onChange={handlePinChange} />
         <h3>Enter PIN to continue</h3>
