@@ -11,6 +11,7 @@ import {
   setEtfsPageInfo,
   setStocksPageInfo,
   selectLoading,
+  resetActiveStockEtfDetails,
 } from '../app/slices/stocks-etfs-slice';
 import { EquityType } from '../models/stocksEtfs';
 import { StyledStocksEtfsTableContainer } from './styles';
@@ -68,6 +69,7 @@ function StocksEtfsTable({ equityType }: IProps) {
   }
 
   function handleRowClick(params: GridRowParams) {
+    dispatch(resetActiveStockEtfDetails());
     history.push(`/${equityType.toLowerCase()}s/${params.row.symbol}`);
   }
 

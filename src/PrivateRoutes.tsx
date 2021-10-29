@@ -4,6 +4,7 @@ import { Redirect, Route } from 'react-router-dom';
 
 import AppLayout from './components/AppLayout';
 import Home from './components/Home';
+import StocksEtfsView from './components/StocksEtfsView/StocksEtfsView';
 import StartUpLoader from './components/StartUpLoader';
 import ErrorPage from './components/ErrorPage';
 
@@ -59,13 +60,16 @@ function PrivateRoutes() {
   }
 
   return (
-    <Route exact path={['/', '/stocks', '/etfs']}>
+    <Route exact path={['/', '/stocks', '/etfs', '/stocks/:symbol', '/etfs/:symbol']}>
       <AppLayout>
         <>
           <Route exact path="/">
             <Redirect to="/stocks" />
           </Route>
-          <Route path="">
+          <Route exact path={['/stocks/:symbol', '/etfs/:symbol']}>
+            <StocksEtfsView />
+          </Route>
+          <Route exact path={['/stocks', '/etfs']}>
             <Home />
           </Route>
         </>

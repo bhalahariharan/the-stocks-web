@@ -74,3 +74,44 @@ export const StyledStocksEtfsTableContainer = styled.div<{ clickableRow?: boolea
 export const StyledLinearProgress = styled.div`
   min-height: 4px;
 `;
+
+export const StyledStocksEtfsHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  color: #333333;
+
+  .company-name,
+  .current-price {
+    margin-bottom: 4px;
+  }
+  .company-symbol,
+  .returns {
+    color: #7c7e8c;
+    margin-top: 4px;
+  }
+  .returns.profit {
+    color: #0abb92;
+  }
+  .returns.loss {
+    color: #eb5b3c;
+  }
+  .duration-sd-container {
+    font-size: 14px;
+    margin-top: 4px;
+    color: #7c7e8c;
+  }
+  .price-container {
+    min-width: 200px;
+  }
+`;
+
+export const StyledDurationPicker = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+`;
+
+export const StocksEtfsChartContainer = styled.div`
+  width: 100%;
+  height: 500px;
+`;
