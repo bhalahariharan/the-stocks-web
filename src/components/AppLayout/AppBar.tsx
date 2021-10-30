@@ -1,5 +1,4 @@
 import React from 'react';
-import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
 import Toolbar from '@mui/material/Toolbar';
 import MuiLink from '@mui/material/Link';
@@ -7,10 +6,8 @@ import Typography from '@mui/material/Typography';
 import LogoutIcon from '@mui/icons-material/Logout';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 
-import { useAppDispatch } from '../../app/hooks';
 import { StyledAppBar, LogoutButton } from '../styles';
-
-import { logout } from '../../app/slices/auth-slice';
+import { logout } from '../../utils/helpers';
 
 function ElevationScroll({ children }: { children: React.ReactElement }) {
   const trigger = useScrollTrigger({
@@ -24,14 +21,6 @@ function ElevationScroll({ children }: { children: React.ReactElement }) {
 }
 
 function AppBar() {
-  const dispatch = useAppDispatch();
-  const history = useHistory();
-
-  function handleLogout() {
-    dispatch(logout());
-    history.push('/authwall');
-  }
-
   return (
     <>
       <ElevationScroll>
@@ -42,7 +31,7 @@ function AppBar() {
                 The Stocks
               </MuiLink>
             </Typography>
-            <LogoutButton endIcon={<LogoutIcon />} onClick={handleLogout}>
+            <LogoutButton endIcon={<LogoutIcon />} onClick={logout}>
               Logout
             </LogoutButton>
           </Toolbar>

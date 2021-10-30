@@ -27,3 +27,8 @@ export function formatDate(isoString: string) {
 export function isNegative(num: number) {
   return num < 0;
 }
+
+export function logout() {
+  localStorage.clear();
+  window.location.href = '/authwall';
+}

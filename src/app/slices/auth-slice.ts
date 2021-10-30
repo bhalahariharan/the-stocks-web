@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-import { AppThunk, RootState } from '../../app/store';
+import { RootState } from '../../app/store';
 import { User } from '../../models/user';
 import { getApiErrorResponse } from '../../utils/helpers';
 import localStorage from '../../utils/local-storage';
@@ -50,11 +50,7 @@ export const fetchCurrentUser = createAsyncThunk<User, void>(
 export const slice = createSlice({
   name: 'auth',
   initialState,
-  reducers: {
-    logout: (state) => {
-      state = initialState;
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(login.pending, (state) => {
@@ -84,10 +80,5 @@ export const slice = createSlice({
 export const selectUser = (state: RootState) => state.auth.user;
 export const selectIsAuthenticated = (state: RootState) => state.auth.isAuthenticated;
 export const selectLoading = (state: RootState) => state.auth.loading;
-
-export const logout = (): AppThunk => (dispatch) => {
-  localStorage.clear();
-  dispatch(slice.actions.logout());
-};
 
 export default slice.reducer;
