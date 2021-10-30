@@ -202,6 +202,6 @@ export const selectActiveStockEtfDetails = (state: RootState) => {
 
   return initialStockEtfDetails;
 };
-export const selectLoading = (state: RootState) => state.auth.loading;
+export const selectLoading = (state: RootState) => state.stocksEtfs.loading;
 
 export default slice.reducer;
