@@ -1,7 +1,7 @@
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 
-import Snackbar from './components/Snackbar';
+import Snackbar from './components/shared/Snackbar';
 import Routes from './Routes';
 
 import theme from './theme';

@@ -1,8 +1,8 @@
 import MuiSnackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 
-import { useAppDispatch, useAppSelector } from '../app/hooks';
-import { hideSnackbar, selectSnackbar } from '../app/slices/snackbar-slice';
+import { useAppDispatch, useAppSelector } from '../../app/hooks';
+import { hideSnackbar, selectSnackbar } from '../../app/slices/snackbar-slice';
 
 function Snackbar() {
   const { open, severity, message } = useAppSelector(selectSnackbar);

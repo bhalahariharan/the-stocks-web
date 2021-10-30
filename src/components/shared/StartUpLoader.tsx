@@ -1,6 +1,6 @@
 import CircularProgress from '@mui/material/CircularProgress';
 
-import { StartUpLoaderContainer } from './styles';
+import { StartUpLoaderContainer } from '../styles';
 
 function StartUpLoader() {
   return (

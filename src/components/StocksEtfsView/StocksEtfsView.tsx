@@ -3,10 +3,10 @@ import { useHistory, useParams } from 'react-router';
 import Container from '@mui/material/Container';
 import LinearProgress from '@mui/material/LinearProgress';
 
-import PageTitleWithBack from '../PageTitleWithBack';
 import StocksEtfsHeader from './StocksEtfsHeader';
 import StocksEtfsChart from './StocksEtfsChart';
 import DurationPicker from './DurationPicker';
+import PageTitleWithBack from '../shared/PageTitleWithBack';
 
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import {

@@ -1,4 +1,4 @@
-import { CenteredContainer } from './styles';
+import { CenteredContainer } from '../styles';
 
 function ErrorPage() {
   return (

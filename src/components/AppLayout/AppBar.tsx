@@ -7,10 +7,10 @@ import Typography from '@mui/material/Typography';
 import LogoutIcon from '@mui/icons-material/Logout';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 
-import { useAppDispatch } from '../app/hooks';
-import { StyledAppBar, LogoutButton } from './styles';
+import { useAppDispatch } from '../../app/hooks';
+import { StyledAppBar, LogoutButton } from '../styles';
 
-import { logout } from '../app/slices/auth-slice';
+import { logout } from '../../app/slices/auth-slice';
 
 function ElevationScroll({ children }: { children: React.ReactElement }) {
   const trigger = useScrollTrigger({

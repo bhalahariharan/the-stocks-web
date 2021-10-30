@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react';
 import { useHistory, useLocation } from 'react-router';
 import { Redirect, Route } from 'react-router-dom';
 
-import AppLayout from './components/AppLayout';
-import Home from './components/Home';
+import AppLayout from './components/AppLayout/AppLayout';
+import Home from './components/Home/Home';
 import StocksEtfsView from './components/StocksEtfsView/StocksEtfsView';
-import StartUpLoader from './components/StartUpLoader';
-import ErrorPage from './components/ErrorPage';
+import StartUpLoader from './components/shared/StartUpLoader';
+import ErrorPage from './components/shared/ErrorPage';
 
 import { useAppDispatch, useAppSelector } from './app/hooks';
 import {

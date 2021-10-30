@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useHistory } from 'react-router';
 import { DataGrid, DataGridProps, GridRowParams, GridRowsProp } from '@mui/x-data-grid';
 
-import { useAppDispatch, useAppSelector } from '../app/hooks';
+import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import {
   fetchEtfs,
   fetchStocks,
@@ -12,9 +12,9 @@ import {
   setStocksPageInfo,
   selectLoading,
   resetActiveStockEtfDetails,
-} from '../app/slices/stocks-etfs-slice';
-import { EquityType } from '../models/stocksEtfs';
-import { StyledStocksEtfsTableContainer } from './styles';
+} from '../../app/slices/stocks-etfs-slice';
+import { EquityType } from '../../models/stocksEtfs';
+import { StyledStocksEtfsTableContainer } from '../styles';
 
 interface IProps {
   equityType: EquityType;
