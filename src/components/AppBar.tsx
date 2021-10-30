@@ -1,6 +1,8 @@
 import React from 'react';
 import { useHistory } from 'react-router';
+import { Link } from 'react-router-dom';
 import Toolbar from '@mui/material/Toolbar';
+import MuiLink from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import LogoutIcon from '@mui/icons-material/Logout';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
@@ -36,7 +38,9 @@ function AppBar() {
         <StyledAppBar position="fixed" elevation={0}>
           <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              The Stocks
+              <MuiLink component={Link} to="/" underline="none" color="inherit">
+                The Stocks
+              </MuiLink>
             </Typography>
             <LogoutButton endIcon={<LogoutIcon />} onClick={handleLogout}>
               Logout
